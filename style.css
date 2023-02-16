@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-heading: "Staatliches", cursive;
+  --ff-texting: "Palanquin", sans-serif;
+
+  --bg-primary: hsla(233, 100%, 97%, 1);
+  --bg-secundary: hsla(312, 91%, 96%, 1);
+  --bg-logo-primary: hsla(218, 17%, 62%, 1);
+  --bg-logo-secundary: hsla(275, 18%, 79%, 1);
+
+  --fc-primary: hsla(274, 84%, 12%, 1);
+  --fc-secundary: hsla(232, 17%, 35%, 1);
+}
+
+body {
+  font-family: var(--ff-texting);
+  font-size: 1.6rem;
+}
+
+.page {
+  position: relative;
+  width: 38.5rem;
+  margin: 0 auto;
+
+  z-index: 1;
+
+  background: var(--bg-primary);
+}
+
+.page::before {
+  content: "";
+  width: 38.5rem;
+  height: 32rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  background: var(--bg-logo-primary);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+
+  background-color: var(--bg-logo-secundary);
+  padding: 0.8rem 0;
+  margin: 4.3rem 0 3rem;
+  width: 38.5rem;
+
+
+  text-align: center;
+  font-family: var(--ff-heading);
+  color: #ffffff;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05rem;
+}
+
+header img {
+  margin-top: 3.2rem;
+}
+
+.paragrafo-principal {
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--fc-primary);
+  text-align: center;
+  font-family: var(--ff-texting);
+  letter-spacing: 2px;
+
+  margin: 1.4rem 0 6rem;
+}
+
+.card-wrapper {
+  position: relative;
+  padding: 0 3.2rem;
+
+  font-family: var(--ff-heading);
+}
+
+.card-wrapper img {
+  width: 32.0rem;
+  height: 25.0rem;
+  border-radius: 2.0rem;
+
+  margin-bottom: 3.2rem;
+  animation: topdown 700ms;
+}
+
+.card-wrapper h2 {
+  position: absolute;
+
+  font-size: 2.0rem;
+  font-weight: 400;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: var(--fc-secundary);
+  background-color: var(--bg-secundary);
+
+  border-radius: 2rem;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  right: 5.6rem;
+  top: 1.6rem;
+
+
+  height: 3.5rem;
+  width: fit-content;
+
+  animation: downtop 700ms 200ms backwards ease-in;
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
