@@ -67,6 +67,10 @@ p {
   margin-bottom: 3.2rem;
 }
 
+.intro-desktop {
+  display: none;
+}
+
 .cards {
   display: grid;
   gap: 3.2rem;
@@ -96,6 +100,10 @@ span {
   width: 100%;
   border-radius: 2rem;
   animation: topdown 700ms;
+}
+
+footer {
+  display: none;
 }
 
 @keyframes downtop {
@@ -145,6 +153,7 @@ span {
   }
 
   .intro-desktop {
+    display: block;
     text-align: center;
   }
 
@@ -183,6 +192,26 @@ span {
 
   .cards .card:nth-child(6) {
     display: none;
+  }
+
+  footer {
+    display: block;
+    margin-left: 37.7rem;
+    padding-top: 5rem;
+  }
+
+  footer p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #4a4e69;
+    line-height: 2.8rem;
+  }
+
+  footer p a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #4a4e69;
   }
 }
 
