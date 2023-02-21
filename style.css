@@ -123,41 +123,112 @@ span {
 }
 
 @media (min-width: 900px) {
+
   .container {
     display: flex;
-    gap: 3.2rem;
-    height: 100vh;
   }
 
   header {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    width: 35rem;
+  }
+
+  main {
+    margin: 0 auto;
   }
 
   .text {
     display: none;
   }
 
+  .intro-desktop {
+    text-align: center;
+  }
+
+  .intro-desktop p {
+    color: #FFFFFF;
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
   .cards {
-    grid-template-columns: auto auto;
     grid-template-areas:
-      "sorvete1 sorvete2"
-      "sorvete3 sorvete4";
+      "sorveteA sorveteB"
+      "sorveteC sorveteD";
+    margin: 6.4rem 0 0 37.7rem;
   }
 
   .cards .card:nth-child(1) {
-    grid-area: sorvete1;
+    grid-area: sorveteA;
   }
 
   .cards .card:nth-child(2) {
-    grid-area: sorvete3;
+    grid-area: sorveteC;
   }
 
   .cards .card:nth-child(3) {
-    grid-area: sorvete4;
+    grid-area: sorveteD;
   }
 
   .cards .card:nth-child(4) {
-    grid-area: sorvete2;
+    grid-area: sorveteB;
   }
+
+  .cards .card:nth-child(5) {
+    display: none;
+  }
+
+  .cards .card:nth-child(6) {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .intro-desktop {
+    text-align: center;
+  }
+
+  .intro-desktop p {
+    color: #FFFFFF;
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+  .cards {
+    grid-template-areas:
+      "A B C"
+      "D B E"
+      "D F E";
+  }
+
+  .cards .card:nth-child(1) {
+    grid-area: A;
+  }
+
+  .cards .card:nth-child(2) {
+    grid-area: B;
+  }
+
+  .cards .card:nth-child(3) {
+    grid-area: C;
+  }
+
+  .cards .card:nth-child(4) {
+    grid-area: D;
+  }
+
+  .cards .card:nth-child(5) {
+    display: inline;
+    grid-area: E;
+  }
+
+  .cards .card:nth-child(6) {
+    display: block;
+    grid-area: F;
+  }
+
 }
