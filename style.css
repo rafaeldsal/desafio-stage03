@@ -167,7 +167,7 @@ footer {
     grid-template-areas:
       "sorveteA sorveteB"
       "sorveteC sorveteD";
-    margin: 6.4rem 0 0 37.7rem;
+    margin: 6.4rem 1rem 0 37.7rem;
   }
 
   .cards .card:nth-child(1) {
